@@ -8,7 +8,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/termsAndConditions', function (req, res) {
-	res.sendFile(path.join(__dirname+'/public/index.html'))	
+	res.sendFile(path.join(__dirname+'/public/termsAndConditions/tnc.html'))	
+});
+
+app.get('/privacyPolicy', function (req, res) {
+	res.sendFile(path.join(__dirname+'/public/privacyPolicy/privacy.html'))	
 });
 
 app.use(express.static(__dirname + '/public'));
